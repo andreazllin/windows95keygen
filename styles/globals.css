@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Windows95';
+    src: url('font/windows95.woff2') format('woff2'),
+        url('font/windows95.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: "Windows95", sans-serif;
+    touch-action: manipulation;
+    padding: 0px;
+    margin: 0px;
+}
+
+html,
+body {
+    background-color: #008081;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 35em;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #393939;
+    border-bottom: 2px solid #393939;
+    border-radius: 0;
+    background-color: #C0C0C0;
+    font-size: 0.65em;
+    gap: 0.5em;
+    padding: 3px 3px 5px 3px;
+}
+
+.card-title {
+    color: white;
+    background-color: #000181;
+    padding: 2px 0px 2px 5px;
+}
+
+.key-input {
+    font-size: 1em;
+    letter-spacing: 0.02em;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-left: 2px solid #393939;
+    border-top: 2px solid #393939;
+    padding: 2px;
+}
+
+.key-input:focus{
+    outline: none;
+}
+
+.btns {
+    display: flex;
+    gap: 0.5em;
+}
+
+.btn {
+    background-color: #C0C0C0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #393939;
+    border-bottom: 2px solid #393939;
+    border-radius: 0;
+    font-size: 0.65rem;
+    outline: none;
+    padding: 2px 10px 2px 10px;
+    height: 30px;
+    width: 5rem;
+}
+
+.btn:active {
+    border-right: 2px solid #C0C0C0;
+    border-bottom: 2px solid #C0C0C0;
+    border-top: 2px solid #393939;
+    border-left: 2px solid #393939;
+}
+
+.btn:active .btn-text {
+    border: dotted 2px black;
+    padding: 0px 2px 0px 2px;
+}
