@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Windows95';
+    src: url('../font/windows95.woff2') format('woff2'),
+        url('../font/windows95.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: "Windows95", sans-serif;
+}
+
+html,
+body {
+    background-color: #008081;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.center {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #393939;
+    border-bottom: 2px solid #393939;
+    border-radius: 0;
+    background-color: #C0C0C0;
+    font-size: .65rem;
+}
+
+.card-title {
+    color: white;
+    background-color: #000181;
+    border: 2px solid #BDBDBD;
+    padding-left: 5px;
+    padding-right: 100px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.card-content,
+.card-footer {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.card-footer {
+    padding-bottom: 10px;
+}
+
+.btn {
+    background-color: #C0C0C0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #393939;
+    border-bottom: 2px solid #393939;
+    font-size: .65rem;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 100px;
+    height: 30px;
+}
+
+.btn:active {
+    border-right: 2px solid #C0C0C0;
+    border-bottom: 2px solid #C0C0C0;
+    border-top: 2px solid #393939;
+    border-left: 2px solid #393939;
+}
+
+.btn:active .btn-text {
+    border: dotted 1.5px black;
+    padding-left: 2px;
+    padding-right: 2px;
+}
