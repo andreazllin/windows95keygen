@@ -8,6 +8,7 @@
 
 * {
     font-family: "Windows95", sans-serif;
+    touch-action: manipulation;
 }
 
 html,
