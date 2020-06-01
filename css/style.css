@@ -71,6 +71,7 @@ body {
     border-left: 2px solid white;
     border-right: 2px solid #393939;
     border-bottom: 2px solid #393939;
+    border-radius: 0;
     font-size: .65rem;
     outline: none;
     padding-left: 10px;
