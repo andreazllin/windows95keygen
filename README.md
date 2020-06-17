@@ -1,5 +1,6 @@
 # windows95keygen
 Windows NT 4.0 and Windows 95 Key Generator (with GUI)
+![Screenshot](https://i.imgur.com/Vr6EBW0.png)
 ## More Infos
 [Here](https://github.com/nilaerdna/Windows95NT4KeyGenerator/blob/master/README.md)
 
