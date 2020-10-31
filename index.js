@@ -10,6 +10,8 @@ const port = process.env.PORT || 3000;
 
 var generatedKey = {
   key: '',
+  source: 'https://github.com/nilaerdna/windows95keygen',
+  author: 'https://github.com/nilaerdna',
 };
 
 app.get('/oem', (request, response) => {
