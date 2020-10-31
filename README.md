@@ -8,6 +8,15 @@ You can check out my Python version [[HERE]](https://github.com/nilaerdna/Window
 
 ------------
 
+### 31/10/2020
+I've updated it! Now it's also an API, you just need to make a GET request.
+
+OEM Key `curl https://windows95keygen.herokuapp.com/oem`
+
+Normal Key `curl https://windows95keygen.herokuapp.com/normal`
+
+------------
+
 ### Tested on:
 - Microsoft Windows NT 4.0 Server (4.00.1381.1)
 - Microsoft Windows NT 4.0 Workstation (4.00.1381.1) [OEM]
