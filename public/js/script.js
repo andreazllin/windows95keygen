@@ -11,13 +11,12 @@ normalButton.addEventListener('click', () => {
 });
 
 function keyRequest(type) {
-  postData(type).then((data) => {
-    textbox.innerHTML = data["key"];
+  getData(type).then((data) => {
+    textbox.innerHTML = data['key'];
   });
 }
 
-// Example POST method implementation:
-async function postData(type) {
+async function getData(type) {
   let url = window.location.href;
   switch (type) {
     case 0:
