@@ -20,10 +20,10 @@ async function getData(type) {
   let url = window.location.href;
   switch (type) {
     case 0:
-      url += 'oem';
+      url += 'api/oem';
       break;
     case 1:
-      url += 'normal';
+      url += 'api/normal';
       break;
   }
   const response = await fetch(url, {
