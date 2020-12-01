@@ -19,6 +19,7 @@ Normal Key `curl https://windows95keygen.tk/api/normal`
 
 ### 01/12/2020
 I changed it from a Express.js API to a Next.js one.
+
 It's now hosted on Vercel, the GUI version it's a little bit slow, it takes around 1s to get the response.
 
 ------------
