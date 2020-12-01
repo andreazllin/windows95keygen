@@ -1,30 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# windows95keygen
+Windows NT 4.0 and Windows 95 Key Generator (with GUI)
+![Screenshot](https://i.imgur.com/Vr6EBW0.png)
 
-## Getting Started
+I wanted to do something with Electron, but it didn't work out, so it's just an HTML page. I had to rewrite the generator in JavaScript from Python, nothing fancy, just rewrote the Python code with the matching JavaScript functions.
 
-First, run the development server:
+You can check out my Python version [[HERE]](https://github.com/nilaerdna/Windows95NT4KeyGenerator)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+------------
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[![Website](https://img.shields.io/website?label=windows95keygen&style=for-the-badge&url=https%3A%2F%2Fwindows95keygen.tk)](https://windows95keygen.tk/)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### 31/10/2020
+I've updated it! Now it's also an API, you just need to make a GET request.
 
-## Learn More
+OEM Key `curl https://windows95keygen.tk/api/oem`
 
-To learn more about Next.js, take a look at the following resources:
+Normal Key `curl https://windows95keygen.tk/api/normal`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 01/12/2020
+I changed it from a Express.js API to a Next.js one.
+It's now hosted on Vercel, the GUI version it's a little bit slow, it takes around 1s to get the response.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+------------
 
-## Deploy on Vercel
+### Tested on:
+- Microsoft Windows NT 4.0 Server (4.00.1381.1)
+- Microsoft Windows NT 4.0 Workstation (4.00.1381.1) [OEM]
+- Microsoft Windows 95C (4.03.1216.OSR2.5) [OEM]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### How does it work?
+Check out [Medium's article](https://medium.com/@dgurney/so-you-want-to-generate-license-keys-for-old-microsoft-products-a355c8bf5408) about it.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Inspiration/Credits
+- [FlyTech's Video](https://youtu.be/3DCEeASKNDk) - 🎥 Video about this topic.
+- [Windows 95 UI Kit](https://github.com/themesberg/windows-95-ui-kit) - 💾 Windows 95 UI Kit made with Bootstrap 4 components.
+
+Ended up not using this last one, but while writing my own CSS I took inspiration from it.
+### This code is only for educational purposes, piracy is not okay, buy the software you are using.
