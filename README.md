@@ -22,6 +22,9 @@ I changed it from a Express.js API to a Next.js one.
 
 It's now hosted on Vercel, the GUI version it's a little bit slow, it takes around 1s to get the response.
 
+### 11/01/2021
+It's a real Next/React app! Not just some HTML and vanilla JS pasted into it...
+
 ------------
 
 ### Tested on:
