@@ -43,6 +43,7 @@ body {
     border-radius: 0;
     background-color: #C0C0C0;
     font-size: .65rem;
+    margin: 10px;
 }
 
 .card-title {
@@ -59,6 +60,19 @@ body {
 .card-footer {
     padding-left: 10px;
     padding-top: 10px;
+}
+
+.key-input {
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-left: 2px solid #393939;
+    border-top: 2px solid #393939;
+    width: calc(100% - 20px);
+    margin-bottom: 5px;
+}
+
+.key-input:focus{
+    outline: none;
 }
 
 .card-footer {

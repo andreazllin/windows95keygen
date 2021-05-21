@@ -3,10 +3,11 @@ import Head from 'next/head';
 import axios from 'axios';
 
 export default function Home() {
+  const [check, setCheck] = useState('-');
   const [key, setKey] = useState('-')
   const getKey = async (keyType) => {
     setKey("Getting key...");
-    const url = `${window.location.href}api/${keyType}`; // API Call to get generated key.
+    const url = `/api/${keyType}`; // API Call to get generated key.
     try {
       const response = await axios.get(url);
       setKey(response.data.key);
@@ -41,6 +42,20 @@ export default function Home() {
                   <span className="btn-text">GitHub</span>
                 </button>
               </a>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="card-title no-select">Validate a Windows NT 4.0 or Windows 95 Key!</div>
+            <div className="card-content">
+              <input type="text" className="key-input"/>
+              <span className="no-select">Check: </span>
+              <span id="checkOutput">{check}</span>
+            </div>
+            <div className="card-footer no-select">
+              <button className="btn" id="normalKeyButton">
+                <span className="btn-text" onClick={() => { checkKey() }}>Check</span>
+              </button>
             </div>
           </div>
         </div>
