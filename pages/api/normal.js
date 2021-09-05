@@ -1,5 +1,4 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import Generator from './generator.js';
+import Generator from './generators';
 
 export default (req, res) => {
   var generatedKey = {

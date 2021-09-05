@@ -3,63 +3,119 @@ import Head from 'next/head';
 import axios from 'axios';
 
 export default function Home() {
-  const [check, setCheck] = useState('-');
-  const [key, setKey] = useState('-')
-  const getKey = async (keyType) => {
-    setKey("Getting key...");
-    const url = `/api/${keyType}`; // API Call to get generated key.
-    try {
-      const response = await axios.get(url);
-      setKey(response.data.key);
-    } catch (error) {
-      setKey("There was an error...");
-    }
-  };
+	const [check, setCheck] = useState('-');
+	const [key, setKey] = useState('-');
+	const [keyToCheck, setKeyToCheck] = useState('');
 
-  return (
-    <>
-      <Head>
-        <title>windows95keygen</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="center">
-        <div className="container">
-          <div className="card">
-            <div className="card-title no-select">Generate a Windows NT 4.0 or Windows 95 Key!</div>
-            <div className="card-content">
-              <span className="no-select">Key: </span>
-              <span id="keyOutput">{key}</span>
-            </div>
-            <div className="card-footer no-select">
-              <button className="btn" id="normalKeyButton">
-                <span className="btn-text" onClick={() => { getKey("normal") }}>Normal</span>
-              </button>
-              <button className="btn" id="oemKeyButton">
-                <span className="btn-text" onClick={() => { getKey("oem") }}>OEM</span>
-              </button>
-              <a target="_blank" href="https://github.com/nilaerdna/windows95keygen">
-                <button className="btn" id="githubButton">
-                  <span className="btn-text">GitHub</span>
-                </button>
-              </a>
-            </div>
-          </div>
+	const getKey = async (keyType) => {
+		setKey('Getting key...');
 
-          <div className="card">
-            <div className="card-title no-select">Validate a Windows NT 4.0 or Windows 95 Key!</div>
-            <div className="card-content">
-              <input type="text" className="key-input"/>
-              <span className="no-select">Check: </span>
-              <span id="checkOutput">{check}</span>
-            </div>
-            <div className="card-footer no-select">
-              <button className="btn" id="normalKeyButton">
-                <span className="btn-text" onClick={() => { checkKey() }}>Check</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
+		const url = `/api/${keyType}`;
+
+		axios
+			.get(url)
+			.then((response) => {
+				setKey(response.data.key);
+			})
+			.catch((error) => {
+				setKey('There was an error...');
+			});
+	};
+
+	const copyKey = () => {
+		navigator.clipboard.writeText(key);
+	};
+
+	const checkKey = () => {
+		setCheck('Checking key...');
+
+		const url = '/api/validate';
+
+		axios
+			.get(url, {
+				params: {
+					key: keyToCheck,
+				},
+			})
+			.then((response) => {
+				setCheck(response.data.message);
+			})
+			.catch((error) => {
+				setCheck('Key is not valid...');
+			});
+	};
+
+	const keyInput = (event) => {
+		setKeyToCheck(event.target.value);
+	};
+
+	return (
+		<>
+			<Head>
+				<title>windows95keygen</title>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<div className="center fullscreen">
+				<div className="container">
+					<div className="card">
+						<div className="card-title no-select">Generate a Windows NT 4.0 or Windows 95 Key!</div>
+						<p className="no-select">Key: {key}</p>
+						<div className="no-select btns">
+							<button
+								className="btn"
+								onClick={() => {
+									getKey('normal');
+								}}
+							>
+								<span className="btn-text">Normal</span>
+							</button>
+							<button
+								className="btn"
+								onClick={() => {
+									getKey('oem');
+								}}
+							>
+								<span className="btn-text">OEM</span>
+							</button>
+							<button
+								className="btn"
+								onClick={() => {
+									copyKey();
+								}}
+							>
+								<span className="btn-text">Copy</span>
+							</button>
+							<a target="_blank" href="https://github.com/nilaerdna/windows95keygen">
+								<button className="btn">
+									<span className="btn-text">GitHub</span>
+								</button>
+							</a>
+						</div>
+					</div>
+
+					<div className="card">
+						<div className="card-title no-select">Validate a Windows NT 4.0 or Windows 95 Key!</div>
+						<input
+							type="text"
+							className="key-input"
+							onChange={() => {
+								keyInput(event);
+							}}
+						/>
+						<p className="no-select">Check: {check}</p>
+						<div className="no-select btns">
+							<button
+								className="btn"
+								onClick={() => {
+									checkKey();
+								}}
+							>
+								<span className="btn-text">Check</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 }

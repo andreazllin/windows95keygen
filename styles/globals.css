@@ -9,13 +9,13 @@
 * {
     font-family: "Windows95", sans-serif;
     touch-action: manipulation;
+    padding: 0px;
+    margin: 0px;
 }
 
 html,
 body {
     background-color: #008081;
-    padding: 0px !important;
-    margin: 0px !important;
 }
 
 .no-select {
@@ -27,60 +27,61 @@ body {
     -ms-user-select: none;
 }
 
-.center {
+.fullscreen {
     width: 100vw;
     height: 100vh;
+}
+
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
 .card {
+    display: flex;
+    flex-direction: column;
+    width: 35em;
     border-top: 2px solid white;
     border-left: 2px solid white;
     border-right: 2px solid #393939;
     border-bottom: 2px solid #393939;
     border-radius: 0;
     background-color: #C0C0C0;
-    font-size: .65rem;
-    margin: 10px;
+    font-size: 0.65em;
+    gap: 0.5em;
+    padding: 3px 3px 5px 3px;
 }
 
 .card-title {
     color: white;
     background-color: #000181;
-    border: 2px solid #BDBDBD;
-    padding-left: 5px;
-    padding-right: 100px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-.card-content,
-.card-footer {
-    padding-left: 10px;
-    padding-top: 10px;
+    padding: 2px 0px 2px 5px;
 }
 
 .key-input {
+    font-size: 1em;
+    letter-spacing: 0.02em;
     border-bottom: 2px solid white;
     border-right: 2px solid white;
     border-left: 2px solid #393939;
     border-top: 2px solid #393939;
-    width: calc(100% - 20px);
-    margin-bottom: 5px;
+    padding: 2px;
 }
 
 .key-input:focus{
     outline: none;
 }
 
-.card-footer {
-    padding-bottom: 10px;
-}
-
-.card-footer > *{
-    margin-right: 5px;
+.btns {
+    display: flex;
+    gap: 0.5em;
 }
 
 .btn {
@@ -90,14 +91,11 @@ body {
     border-right: 2px solid #393939;
     border-bottom: 2px solid #393939;
     border-radius: 0;
-    font-size: .65rem;
+    font-size: 0.65rem;
     outline: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    width: 100px;
+    padding: 2px 10px 2px 10px;
     height: 30px;
+    width: 5rem;
 }
 
 .btn:active {
@@ -108,7 +106,6 @@ body {
 }
 
 .btn:active .btn-text {
-    border: dotted 1.5px black;
-    padding-left: 2px;
-    padding-right: 2px;
+    border: dotted 2px black;
+    padding: 0px 2px 0px 2px;
 }
