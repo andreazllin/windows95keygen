@@ -38,7 +38,7 @@ function checkSecondSegmentNormal(numberString) {
 		return false;
 	}
 	let digitSum = 0;
-	for (let i = 0; i < numberString.length - 1; i++) {
+	for (let i = 0; i < numberString.length; i++) {
 		digitSum += parseInt(numberString.charAt(i));
 	}
 	if (digitSum % 7 != 0) {
