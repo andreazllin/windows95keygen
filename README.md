@@ -2,7 +2,7 @@
 
 Windows NT 4.0 and Windows 95 Key Generator (with GUI)
 
-[![Website](https://img.shields.io/website?label=windows95keygen&style=for-the-badge&url=https%3A%2F%2Fwindows95keygen.tk)](https://windows95keygen.tk/)
+[![Website](https://img.shields.io/website?label=windows95keygen&style=for-the-badge&url=https%3A%2F%2Fwindows95keygen.vercel.app)](https://windows95keygen.tk/)
 
 ![Screenshot](https://i.imgur.com/Vr6EBW0.png)
 
