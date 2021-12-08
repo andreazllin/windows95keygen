@@ -18,9 +18,9 @@ You can check out my Python version [[HERE]](https://github.com/nilaerdna/Window
 
 I've updated it! Now it's also an API, you just need to make a GET request.
 
-OEM Key `curl https://windows95keygen.tk/api/oem`
+OEM Key `curl https://windows95keygen.vercel.app/api/oem`
 
-Normal Key `curl https://windows95keygen.tk/api/normal`
+Normal Key `curl https://windows95keygen.vercel.app/api/normal`
 
 ### 01/12/2020
 
@@ -36,7 +36,7 @@ It's a real Next/React app! Not just some HTML and vanilla JS pasted into it...
 
 You can now check/validate your keys!
 
-You just need to send a GET request at `https://windows95keygen.tk/api/validate` with this format
+You just need to send a GET request at `https://windows95keygen.vercel.app/api/validate` with this format
 
 ```json
 { key: "YOUR KEY" }
