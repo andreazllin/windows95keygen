@@ -19,7 +19,7 @@ export default (req, res) => {
 				});
 			} else {
 				res.status(200).json({
-					message: 'Not Valid OEM Key',
+					message: 'Invalid OEM Key',
 				});
 			}
 		} else {
@@ -30,7 +30,7 @@ export default (req, res) => {
 				});
 			} else {
 				res.status(200).json({
-					message: 'Not Valid Normal Key',
+					message: 'Invalid Normal Key',
 				});
 			}
 		}
